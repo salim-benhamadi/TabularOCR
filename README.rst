@@ -1,14 +1,14 @@
-TableOCR
+TabularOCR
 ========
 
-.. image:: https://img.shields.io/pypi/v/tableocr.svg
-    :target: https://pypi.python.org/pypi/tableocr
+.. image:: https://img.shields.io/pypi/v/tabularOCR.svg
+    :target: https://pypi.python.org/pypi/tabularOCR
 
 .. image:: https://readthedocs.org/projects/tableocr/badge/?version=latest
     :target: https://tableocr.readthedocs.io/en/latest/?version=latest
     :alt: Documentation Status
 
-TableOCR is a powerful and versatile Python library that provides an easy-to-use Optical Character Recognition (OCR) solution for extracting tables from images and PDFs. It offers flexible output options, allowing you to export the extracted data in CSV, XLSX, or other spreadsheet formats.
+TabularOCR is a powerful and versatile Python library that provides an easy-to-use Optical Character Recognition (OCR) solution for extracting tables from images and PDFs. It offers flexible output options, allowing you to export the extracted data in CSV, XLSX, or other spreadsheet formats.
 
 * Free software: MIT license
 * Documentation: https://tableocr.readthedocs.io.
@@ -16,7 +16,7 @@ TableOCR is a powerful and versatile Python library that provides an easy-to-use
 Features
 --------
 
-- **Accurate Table Detection**: TableOCR uses advanced computer vision algorithms to accurately detect and extract tables from images and PDFs, even in challenging scenarios with complex layouts or low-quality scans. It employs techniques such as edge detection, connected component analysis, and deep learning-based object detection to locate and isolate tables within the input document.
+- **Accurate Table Detection**: TabularOCR uses advanced computer vision algorithms to accurately detect and extract tables from images and PDFs, even in challenging scenarios with complex layouts or low-quality scans. It employs techniques such as edge detection, connected component analysis, and deep learning-based object detection to locate and isolate tables within the input document.
 
 - **Multiple Input Formats**: Supports a wide range of input formats, including PNG, JPG, BMP, TIFF, and PDF files, allowing for flexibility in processing various types of document sources.
 
@@ -30,30 +30,30 @@ Features
 
 - **Configurable Settings**: Provides a range of configuration options to fine-tune the table extraction process, including options for adjusting image pre-processing (e.g., deskewing, denoising, and binarization), OCR engine settings (e.g., language packs, character whitelists), and output formatting (e.g., column delimiters, date formats).
 
-- **Embedded OCR Engines**: TableOCR comes bundled with several popular OCR engines, including Tesseract and LSTM-based models, ensuring high accuracy and flexibility in table extraction. Additional OCR engines can be easily integrated, thanks to the modular design of the library.
+- **Embedded OCR Engines**: TabularOCR comes bundled with several popular OCR engines, including Tesseract and LSTM-based models, ensuring high accuracy and flexibility in table extraction. Additional OCR engines can be easily integrated, thanks to the modular design of the library.
 
-- **Seamless Integration**: Designed with a user-friendly API, TableOCR can be easily integrated into your existing Python projects, allowing for efficient table data extraction and analysis workflows, enabling applications in areas such as data mining, research, and business intelligence.
+- **Seamless Integration**: Designed with a user-friendly API, TabularOCR can be easily integrated into your existing Python projects, allowing for efficient table data extraction and analysis workflows, enabling applications in areas such as data mining, research, and business intelligence.
 
 Installation
 ------------
 
-TableOCR can be installed from PyPI using pip:
+TabularOCR can be installed from PyPI using pip:
 
 .. code-block:: bash
 
-    pip install tableocr
+    pip install TabularOCR
 
 Usage
 -----
 
-Here's a simple example of how to use TableOCR to extract tables from an image file:
+Here's a simple example of how to use TabularOCR to extract tables from an image file:
 
 .. code-block:: python
 
-    from tableocr import TableOCR
+    from tabularocr import TabularOCR
 
-    # Initialize the TableOCR instance
-    ocr = TableOCR()
+    # Initialize the TabularOCR instance
+    ocr = TabularOCR()
 
     # Path to the input image or PDF file
     image_path = "path/to/image.png"
@@ -69,15 +69,15 @@ Usage Examples
 
 1. **Batch Processing**:
 
-TableOCR supports batch processing of multiple files in a directory or folder structure. Here's an example:
+TabularOCR supports batch processing of multiple files in a directory or folder structure. Here's an example:
 
 .. code-block:: python
 
-    from tableocr import TableOCR
+    from tabularocr import TabularOCR
     import os
 
-    # Initialize the TableOCR instance
-    ocr = TableOCR()
+    # Initialize the TabularOCR instance
+    ocr = TabularOCR()
 
     # Directory containing input files
     input_dir = "path/to/input/directory"
@@ -97,10 +97,10 @@ You can fine-tune the OCR engine settings to optimize performance for specific d
 
 .. code-block:: python
 
-    from tableocr import TableOCR, OCRSettings
+    from tabularocr import TabularOCR, OCRSettings
 
-    # Initialize the TableOCR instance
-    ocr = TableOCR()
+    # Initialize the TabularOCR instance
+    ocr = TabularOCR()
 
     # Configure OCR settings
     settings = OCRSettings(language="fra", whitelist="0123456789")
@@ -112,14 +112,14 @@ You can fine-tune the OCR engine settings to optimize performance for specific d
 
 3. **Customizing Output Formatting**:
 
-TableOCR allows you to customize the output format by specifying column delimiters, date formats, and other formatting options:
+TabularOCR allows you to customize the output format by specifying column delimiters, date formats, and other formatting options:
 
 .. code-block:: python
 
-    from tableocr import TableOCR, OutputSettings
+    from tabularocr import TabularOCR, OutputSettings
 
-    # Initialize the TableOCR instance
-    ocr = TableOCR()
+    # Initialize the TabularOCR instance
+    ocr = TabularOCR()
 
     # Configure output settings
     output_settings = OutputSettings(delimiter="|", date_format="%Y-%m-%d")
@@ -135,12 +135,12 @@ For more advanced usage, such as handling PDF files, table structure analysis, a
 Contributing
 ------------
 
-Contributions to TableOCR are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request on the `GitHub repository <https://github.com/salim-benhamadi/tableocr>`_.
+Contributions to TabularOCR are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request on the `GitHub repository <https://github.com/salim-benhamadi/tableocr>`_.
 
 Credits
 -------
 
-TableOCR was created and is maintained by `Salim Benhamadi <https://github.com/salim-benhamadi>`_.
+TabularOCR was created and is maintained by `Salim Benhamadi <https://github.com/salim-benhamadi>`_.
 
 License
 -------

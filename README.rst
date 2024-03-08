@@ -16,65 +16,131 @@ TableOCR is a powerful and versatile Python library that provides an easy-to-use
 Features
 --------
 
-- **Accurate Table Detection**: TableOCR uses advanced computer vision algorithms to accurately detect and extract tables from images and PDFs, even in challenging scenarios with complex layouts or low-quality scans.
+- **Accurate Table Detection**: TableOCR uses advanced computer vision algorithms to accurately detect and extract tables from images and PDFs, even in challenging scenarios with complex layouts or low-quality scans. It employs techniques such as edge detection, connected component analysis, and deep learning-based object detection to locate and isolate tables within the input document.
 
-- **Multiple Input Formats**: Supports a wide range of input formats, including PNG, JPG, BMP, TIFF, and PDF files.
+- **Multiple Input Formats**: Supports a wide range of input formats, including PNG, JPG, BMP, TIFF, and PDF files, allowing for flexibility in processing various types of document sources.
 
-- **Customizable Output**: Offers flexible output options, allowing you to export the extracted data in CSV, XLSX, or other spreadsheet formats of your choice.
+- **Customizable Output**: Offers flexible output options, allowing you to export the extracted data in CSV, XLSX, or other spreadsheet formats of your choice, ensuring seamless integration with your existing data processing workflows.
 
-- **Batch Processing**: Easily process multiple files in a directory or a folder structure, making it ideal for high-volume data extraction tasks.
+- **Batch Processing**: Easily process multiple files in a directory or a folder structure, making it ideal for high-volume data extraction tasks, such as digitizing large archives or processing scanned documents at scale.
 
-- **Multi-language Support**: Leverages state-of-the-art OCR engines to support a wide range of languages, enabling accurate table extraction from documents in various languages.
+- **Multi-language Support**: Leverages state-of-the-art OCR engines to support a wide range of languages, enabling accurate table extraction from documents in various languages, including English, Spanish, French, German, Chinese, Arabic, and many more.
 
-- **Parallel Processing**: Utilizes multi-threading and parallel processing capabilities to speed up the table extraction process, significantly reducing processing times for large datasets.
+- **Parallel Processing**: Utilizes multi-threading and parallel processing capabilities to speed up the table extraction process, significantly reducing processing times for large datasets or complex documents.
 
-- **Configurable Settings**: Provides a range of configuration options to fine-tune the table extraction process, including options for adjusting image pre-processing, OCR engine settings, and output formatting.
+- **Configurable Settings**: Provides a range of configuration options to fine-tune the table extraction process, including options for adjusting image pre-processing (e.g., deskewing, denoising, and binarization), OCR engine settings (e.g., language packs, character whitelists), and output formatting (e.g., column delimiters, date formats).
 
-- **Embedded OCR Engines**: TableOCR comes bundled with several popular OCR engines, including Tesseract and LSTM-based models, ensuring high accuracy and flexibility in table extraction.
+- **Embedded OCR Engines**: TableOCR comes bundled with several popular OCR engines, including Tesseract and LSTM-based models, ensuring high accuracy and flexibility in table extraction. Additional OCR engines can be easily integrated, thanks to the modular design of the library.
 
-- **Seamless Integration**: Designed with a user-friendly API, TableOCR can be easily integrated into your existing Python projects, allowing for efficient table data extraction and analysis workflows.
+- **Seamless Integration**: Designed with a user-friendly API, TableOCR can be easily integrated into your existing Python projects, allowing for efficient table data extraction and analysis workflows, enabling applications in areas such as data mining, research, and business intelligence.
 
 Installation
 ------------
 
 TableOCR can be installed from PyPI using pip:
 
-```bash
-pip install tableocr
-```
+.. code-block:: bash
+
+    pip install tableocr
 
 Usage
 -----
 
 Here's a simple example of how to use TableOCR to extract tables from an image file:
 
-```python
-from tableocr import TableOCR
+.. code-block:: python
 
-# Initialize the TableOCR instance
-ocr = TableOCR()
+    from tableocr import TableOCR
 
-# Path to the input image or PDF file
-image_path = "path/to/image.png"
+    # Initialize the TableOCR instance
+    ocr = TableOCR()
 
-# Extract tables from the image
-tables = ocr.extract(image_path)
+    # Path to the input image or PDF file
+    image_path = "path/to/image.png"
 
-# Export the extracted tables to a CSV file
-ocr.to_csv("output.csv", tables)
-```
+    # Extract tables from the image
+    tables = ocr.extract(image_path)
 
-For more advanced usage, including batch processing, configuring OCR settings, and handling PDF files, refer to the [documentation](https://tableocr.readthedocs.io).
+    # Export the extracted tables to a CSV file
+    ocr.to_csv("output.csv", tables)
+
+Usage Examples
+-----------------------
+
+1. **Batch Processing**:
+
+TableOCR supports batch processing of multiple files in a directory or folder structure. Here's an example:
+
+.. code-block:: python
+
+    from tableocr import TableOCR
+    import os
+
+    # Initialize the TableOCR instance
+    ocr = TableOCR()
+
+    # Directory containing input files
+    input_dir = "path/to/input/directory"
+
+    # Iterate over files in the directory
+    for filename in os.listdir(input_dir):
+        file_path = os.path.join(input_dir, filename)
+        tables = ocr.extract(file_path)
+
+        # Export tables to individual CSV files
+        output_file = f"output_{filename}.csv"
+        ocr.to_csv(output_file, tables)
+
+2. **Configuring OCR Settings**:
+
+You can fine-tune the OCR engine settings to optimize performance for specific document types or languages:
+
+.. code-block:: python
+
+    from tableocr import TableOCR, OCRSettings
+
+    # Initialize the TableOCR instance
+    ocr = TableOCR()
+
+    # Configure OCR settings
+    settings = OCRSettings(language="fra", whitelist="0123456789")
+    ocr.set_ocr_settings(settings)
+
+    # Extract tables using the configured settings
+    image_path = "path/to/image.png"
+    tables = ocr.extract(image_path)
+
+3. **Customizing Output Formatting**:
+
+TableOCR allows you to customize the output format by specifying column delimiters, date formats, and other formatting options:
+
+.. code-block:: python
+
+    from tableocr import TableOCR, OutputSettings
+
+    # Initialize the TableOCR instance
+    ocr = TableOCR()
+
+    # Configure output settings
+    output_settings = OutputSettings(delimiter="|", date_format="%Y-%m-%d")
+    ocr.set_output_settings(output_settings)
+
+    # Extract tables and export to CSV with custom settings
+    image_path = "path/to/image.png"
+    tables = ocr.extract(image_path)
+    ocr.to_csv("output.csv", tables)
+
+For more advanced usage, such as handling PDF files, table structure analysis, and table merging, refer to the `documentation <https://tableocr.readthedocs.io>`_.
 
 Contributing
 ------------
 
-Contributions to TableOCR are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/salim-benhamadi/tableocr).
+Contributions to TableOCR are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request on the `GitHub repository <https://github.com/salim-benhamadi/tableocr>`_.
 
 Credits
 -------
 
-TableOCR was created and is maintained by [Salim Benhamadi](https://github.com/salim-benhamadi).
+TableOCR was created and is maintained by `Salim Benhamadi <https://github.com/salim-benhamadi>`_.
 
 License
 -------

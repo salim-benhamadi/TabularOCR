@@ -39,30 +39,30 @@ Installation
 
 TableOCR can be installed from PyPI using pip:
 
-```
+``
 pip install tableocr
-```
+``
 
 Usage
 -----
 
 Here's a simple example of how to use TableOCR to extract tables from an image file:
 
-```python
+``python
 from tableocr import TableOCR
 
 # Initialize the TableOCR instance
 ocr = TableOCR()
 
-# Path to the input image file
+# Path to the input image or PDF file
 image_path = "path/to/image.png"
 
 # Extract tables from the image
-tables = ocr.extract_tables(image_path)
+tables = ocr.extract(image_path)
 
 # Export the extracted tables to a CSV file
-ocr.export_to_csv("output.csv", tables)
-```
+ocr.to_csv("output.csv", tables)
+``
 
 For more advanced usage, including batch processing, configuring OCR settings, and handling PDF files, refer to the [documentation](https://tableocr.readthedocs.io).
 

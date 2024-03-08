@@ -6,9 +6,6 @@ TableOCR
 .. image:: https://img.shields.io/pypi/v/tableocr.svg
         :target: https://pypi.python.org/pypi/tableocr
 
-.. image:: https://img.shields.io/travis/salim-benhamadi/tableocr.svg
-        :target: https://travis-ci.com/salim-benhamadi/tableocr
-
 .. image:: https://readthedocs.org/projects/tableocr/badge/?version=latest
         :target: https://tableocr.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status

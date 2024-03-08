@@ -1,4 +1,4 @@
-#!C:\Users\salim\Desktop\tableocr\myenv\Scripts\python.exe
+#!C:\Users\Benhamadi\TableOCR\myenv\Scripts\python.exe
 """Extract pdf structure in XML format"""
 import logging
 import os.path

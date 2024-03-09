@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use TableOCR in a project::
+To use tabularocr in a project::
 
-    import tableocr
+    import tabularocr

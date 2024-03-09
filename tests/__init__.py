@@ -1,1 +1,1 @@
-"""Unit test package for tableocr."""
+"""Unit test package for tabularocr."""

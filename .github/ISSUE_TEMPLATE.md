@@ -1,4 +1,4 @@
-* TableOCR version:
+* tabularocr version:
 * Python version:
 * Operating System:
 

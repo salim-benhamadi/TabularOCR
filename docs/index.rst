@@ -1,4 +1,4 @@
-Welcome to TableOCR's documentation!
+Welcome to tabularocr's documentation!
 ======================================
 
 .. toctree::

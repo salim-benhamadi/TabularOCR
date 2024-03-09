@@ -4,14 +4,14 @@ TabularOCR
 .. image:: https://img.shields.io/pypi/v/tabularOCR.svg
     :target: https://pypi.python.org/pypi/tabularOCR
 
-.. image:: https://readthedocs.org/projects/tableocr/badge/?version=latest
-    :target: https://tableocr.readthedocs.io/en/latest/?version=latest
+.. image:: https://readthedocs.org/projects/tabularocr/badge/?version=latest
+    :target: https://tabularocr.readthedocs.io/en/latest/?version=latest
     :alt: Documentation Status
 
 TabularOCR is a powerful and versatile Python library that provides an easy-to-use Optical Character Recognition (OCR) solution for extracting tables from images and PDFs. It offers flexible output options, allowing you to export the extracted data in CSV, XLSX, or other spreadsheet formats.
 
 * Free software: MIT license
-* Documentation: https://tableocr.readthedocs.io.
+* Documentation: https://tabularocr.readthedocs.io.
 
 Features
 --------
@@ -130,12 +130,12 @@ TabularOCR allows you to customize the output format by specifying column delimi
     tables = ocr.extract(image_path)
     ocr.to_csv("output.csv", tables)
 
-For more advanced usage, such as handling PDF files, table structure analysis, and table merging, refer to the `documentation <https://tableocr.readthedocs.io>`_.
+For more advanced usage, such as handling PDF files, table structure analysis, and table merging, refer to the `documentation <https://tabularocr.readthedocs.io>`_.
 
 Contributing
 ------------
 
-Contributions to TabularOCR are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request on the `GitHub repository <https://github.com/salim-benhamadi/tableocr>`_.
+Contributions to TabularOCR are welcome! If you encounter any issues or have ideas for improvements, please open an issue or submit a pull request on the `GitHub repository <https://github.com/salim-benhamadi/tabularocr>`_.
 
 Credits
 -------

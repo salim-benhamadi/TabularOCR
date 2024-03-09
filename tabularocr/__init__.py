@@ -1,4 +1,4 @@
-"""Top-level package for TableOCR."""
+"""Top-level package for tabularocr."""
 
 __author__ = """Salim Benhamadi"""
 __email__ = 'salim.benhamadi@outlook.com'

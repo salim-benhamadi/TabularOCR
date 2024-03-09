@@ -31,7 +31,7 @@ setup(
     description="TabularOCR is a Python library that provides an easy-to-use Optical Character Recognition (OCR) solution for extracting tables from images and PDFs. It offers flexible output options, allowing you to export the extracted data in CSV, XLSX, or other spreadsheet formats.",
     entry_points={
         'console_scripts': [
-            'tableocr=tableocr.cli:main',
+            'tabularocr=tabularocr.cli:main',
         ],
     },
     install_requires=requirements,
@@ -43,7 +43,7 @@ setup(
     packages=find_packages(include=['TabularOCR', 'TabularOCR.*']),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/salim-benhamadi/tableocr',
+    url='https://github.com/salim-benhamadi/tabularocr',
     version='0.1.0',
     zip_safe=False,
 )

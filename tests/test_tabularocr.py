@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 
-"""Tests for `tableocr` package."""
+"""Tests for `tabularocr` package."""
 
 
 import unittest
 from click.testing import CliRunner
 
-from tableocr import tableocr
-from tableocr import cli
+from tabularocr import tabularocr
+from tabularocr import cli
 
 
-class TestTableocr(unittest.TestCase):
-    """Tests for `tableocr` package."""
+class Testtabularocr(unittest.TestCase):
+    """Tests for `tabularocr` package."""
 
     def setUp(self):
         """Set up test fixtures, if any."""
@@ -27,7 +27,7 @@ class TestTableocr(unittest.TestCase):
         runner = CliRunner()
         result = runner.invoke(cli.main)
         assert result.exit_code == 0
-        assert 'tableocr.cli.main' in result.output
+        assert 'tabularocr.cli.main' in result.output
         help_result = runner.invoke(cli.main, ['--help'])
         assert help_result.exit_code == 0
         assert '--help  Show this message and exit.' in help_result.output

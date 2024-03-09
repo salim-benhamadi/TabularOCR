@@ -6,7 +6,7 @@ from paddleocr import PaddleOCR
 import layoutparser as lp
 import os
 
-class TableOCR:
+class tabularocr:
     def __init__(self, image_path):
         self.image_path = image_path
         self.ocr = PaddleOCR(lang='en')
@@ -151,5 +151,5 @@ class TableOCR:
             print("Unsupported export format. Please choose 'csv' or 'excel'.")
 
 if __name__ == "__main__":
-    ocr = TableOCR("tableocr\TABLE8.png")
+    ocr = tabularocr("tabularocr\TABLE8.png")
     ocr.extract(export_format='excel')
